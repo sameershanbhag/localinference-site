@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LocalInference — Run AI on Your Phone. Privately.</title>
   <meta name="description" content="Run powerful open-source AI models on your phone. Native tool calling, on-device agentic loops, zero tracking. Download for iPhone & Android.">
-  <meta name="theme-color" content="#4F46E5">
+  <meta name="theme-color" content="#2F6FE0">
   <meta property="og:title" content="LocalInference — Run AI on Your Phone. Privately.">
   <meta property="og:description" content="Native tool calling, on-device agentic loops, zero tracking. No cloud, no account.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234F46E5'/%3E%3Ccircle cx='16' cy='16' r='6' fill='white'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23171a21'/%3E%3Crect x='9' y='9' width='14' height='14' rx='5' fill='%234f8ef7'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,10 +23,15 @@
       --line: #E5E7EB;
       --line-soft: #F0F1F3;
       --surface: #F7F8FA;
-      --accent: #4F46E5;
-      --accent-dark: #4338CA;
-      --accent-soft: #EEF2FF;
-      --good: #059669;
+      --accent: #2F6FE0;
+      --accent-bright: #4F8EF7;
+      --accent-dark: #1D4FB0;
+      --accent-soft: #EAF1FD;
+      --app-bg: #0F1115;
+      --app-card: #171A21;
+      --app-border: #2E3340;
+      --app-muted: #8A91A3;
+      --good: #1E8C4D;
       --good-soft: #ECFDF5;
       --bad: #DC2626;
       --bad-soft: #FEF2F2;
@@ -89,8 +94,9 @@
     .brand-mark {
       width: 28px;
       height: 28px;
-      border-radius: 8px;
-      background: linear-gradient(155deg, var(--accent), #7C3AED);
+      border-radius: 9px;
+      background: var(--app-card);
+      border: 1px solid var(--app-border);
       position: relative;
       flex-shrink: 0;
     }
@@ -98,9 +104,9 @@
     .brand-mark::after {
       content: '';
       position: absolute;
-      inset: 8px;
-      border-radius: 50%;
-      background: #fff;
+      inset: 6px;
+      border-radius: 5px;
+      background: linear-gradient(155deg, var(--accent-bright), var(--accent));
     }
 
     .nav-links {
@@ -143,7 +149,7 @@
       padding: 88px 24px 40px;
       background:
         radial-gradient(600px 300px at 15% -10%, var(--accent-soft), transparent),
-        radial-gradient(500px 260px at 100% 0%, #F5F3FF, transparent);
+        radial-gradient(500px 260px at 100% 0%, #F0F6FF, transparent);
     }
 
     .hero-grid {
@@ -182,7 +188,7 @@
 
     .hero h1 em {
       font-style: normal;
-      background: linear-gradient(100deg, var(--accent), #7C3AED);
+      background: linear-gradient(100deg, var(--accent-bright), var(--accent-dark));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -251,13 +257,14 @@
     }
 
     .phone-screen {
-      background: #fff;
+      background: var(--app-bg);
       border-radius: 32px;
       overflow: hidden;
       position: relative;
-      height: 560px;
+      height: 580px;
       display: flex;
       flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     .phone-status {
@@ -267,11 +274,11 @@
       padding: 14px 22px 4px;
       font-size: 12px;
       font-weight: 600;
-      color: var(--ink);
+      color: #fff;
     }
 
     .phone-status .bars { display: flex; gap: 3px; align-items: flex-end; }
-    .phone-status .bars i { display: block; width: 3px; background: var(--ink); border-radius: 1px; }
+    .phone-status .bars i { display: block; width: 3px; background: #fff; border-radius: 1px; }
     .phone-status .bars i:nth-child(1) { height: 4px; }
     .phone-status .bars i:nth-child(2) { height: 6px; }
     .phone-status .bars i:nth-child(3) { height: 8px; }
@@ -284,7 +291,7 @@
       transform: translateX(-50%);
       width: 90px;
       height: 22px;
-      background: var(--ink);
+      background: #000;
       border-radius: 0 0 14px 14px;
     }
 
@@ -292,76 +299,122 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 18px 12px;
-      border-bottom: 1px solid var(--line-soft);
+      padding: 12px 16px 12px;
     }
 
-    .phone-header .who { display: flex; align-items: center; gap: 8px; }
-    .phone-header .mark { width: 22px; height: 22px; border-radius: 6px; background: linear-gradient(155deg, var(--accent), #7C3AED); }
-    .phone-header .name { font-size: 13px; font-weight: 700; }
-    .phone-header .pill {
-      font-size: 10px; font-weight: 600; color: var(--good); background: var(--good-soft);
-      padding: 3px 8px; border-radius: 999px; display: inline-flex; align-items: center; gap: 4px;
+    .phone-header .hamburger { display: flex; flex-direction: column; gap: 3px; width: 16px; }
+    .phone-header .hamburger span { display: block; height: 2px; background: var(--app-muted); border-radius: 1px; }
+    .phone-header .hamburger span:nth-child(1) { width: 100%; }
+    .phone-header .hamburger span:nth-child(2) { width: 100%; }
+
+    .phone-header .title { font-size: 13px; font-weight: 600; color: #fff; }
+
+    .phone-header .gear {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--app-card); border: 1px solid var(--app-border);
+      display: flex; align-items: center; justify-content: center;
     }
-    .phone-header .pill i { width: 5px; height: 5px; border-radius: 50%; background: var(--good); }
+    .phone-header .gear svg { width: 14px; height: 14px; stroke: var(--app-muted); }
 
     .phone-body {
       flex: 1;
-      padding: 16px;
+      padding: 14px 14px 8px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
       overflow: hidden;
     }
 
     .msg {
-      max-width: 82%;
-      padding: 9px 13px;
-      border-radius: 14px;
-      font-size: 12.5px;
+      font-size: 12px;
       line-height: 1.5;
       animation: rise 500ms ease both;
     }
 
     .msg.user {
       align-self: flex-end;
-      background: var(--ink);
-      color: #fff;
+      max-width: 82%;
+      padding: 9px 13px;
+      border-radius: 14px;
       border-bottom-right-radius: 4px;
-    }
-
-    .msg.bot {
-      align-self: flex-start;
-      background: var(--surface);
-      color: var(--ink);
-      border-bottom-left-radius: 4px;
+      background: linear-gradient(155deg, var(--accent-bright), var(--accent));
+      color: #fff;
     }
 
     .msg.tool {
-      align-self: flex-start;
       display: flex;
       align-items: center;
-      gap: 6px;
-      background: var(--accent-soft);
-      color: var(--accent-dark);
-      font-weight: 600;
-      font-size: 11.5px;
-      padding: 7px 12px;
-      border-radius: 10px;
+      gap: 7px;
+      background: var(--app-card);
+      border: 1px solid var(--app-border);
+      color: var(--app-muted);
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 10.5px;
+      padding: 7px 11px;
+      border-radius: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .msg.tool svg { width: 13px; height: 13px; stroke: var(--accent-dark); }
+    .msg.tool .tdot { width: 6px; height: 6px; border-radius: 50%; background: var(--good); flex-shrink: 0; }
+    .msg.tool b { color: #fff; font-weight: 600; }
+
+    .msg.think {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--app-muted);
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .msg.think svg { width: 11px; height: 11px; stroke: var(--app-muted); }
+
+    .msg.bot {
+      color: #e8eaf0;
+    }
+
+    .msg.stats {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 10px;
+      color: var(--app-muted);
+    }
+    .msg.stats .bar { width: 3px; height: 12px; border-radius: 2px; background: var(--good); }
 
     .msg:nth-child(1) { animation-delay: 0ms; }
     .msg:nth-child(2) { animation-delay: 120ms; }
     .msg:nth-child(3) { animation-delay: 260ms; }
-    .msg:nth-child(4) { animation-delay: 420ms; }
-    .msg:nth-child(5) { animation-delay: 560ms; }
+    .msg:nth-child(4) { animation-delay: 400ms; }
+    .msg:nth-child(5) { animation-delay: 540ms; }
+    .msg:nth-child(6) { animation-delay: 680ms; }
 
     @keyframes rise {
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    .phone-input {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 14px 16px;
+      padding: 10px 8px 10px 14px;
+      background: var(--app-card);
+      border: 1px solid var(--app-border);
+      border-radius: 999px;
+    }
+
+    .phone-input .placeholder { flex: 1; font-size: 12px; color: var(--app-muted); }
+
+    .phone-input .send {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(155deg, var(--accent-bright), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .phone-input .send svg { width: 13px; height: 13px; stroke: #fff; stroke-width: 2.4; }
 
     .float-chip {
       position: absolute;
@@ -434,7 +487,7 @@
       transform: translateY(-3px);
     }
 
-    .feature-card.highlight { background: linear-gradient(180deg, #FBFAFF, #fff); border-color: #E4E1FB; }
+    .feature-card.highlight { background: linear-gradient(180deg, #F7FAFF, #fff); border-color: #D9E7FC; }
 
     .feature-tag {
       position: absolute;
@@ -562,7 +615,7 @@
       font-size: 36px;
       font-weight: 800;
       letter-spacing: -1px;
-      background: linear-gradient(100deg, var(--accent), #7C3AED);
+      background: linear-gradient(100deg, var(--accent-bright), var(--accent-dark));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -577,7 +630,7 @@
       margin: 0 auto;
       padding: 72px 48px;
       border-radius: 28px;
-      background: linear-gradient(135deg, #14101F, #1B1530 55%, var(--accent-dark));
+      background: linear-gradient(135deg, var(--app-bg), #131720 55%, var(--accent-dark));
       text-align: center;
       color: #fff;
       position: relative;
@@ -588,7 +641,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(400px 200px at 20% 0%, rgba(124,58,237,0.35), transparent);
+      background: radial-gradient(400px 200px at 20% 0%, rgba(79,142,247,0.35), transparent);
     }
 
     .cta-panel > * { position: relative; }
@@ -679,17 +732,21 @@
               <span class="bars"><i></i><i></i><i></i><i></i></span>
             </div>
             <div class="phone-header">
-              <div class="who">
-                <span class="mark"></span>
-                <span class="name">LocalInference</span>
-              </div>
-              <span class="pill"><i></i>Offline</span>
+              <div class="hamburger"><span></span><span></span></div>
+              <span class="title">Find a coffee shop nearby</span>
+              <span class="gear"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg></span>
             </div>
             <div class="phone-body">
               <div class="msg user">Find a quiet coffee shop nearby and add it to my calendar for 3pm</div>
-              <div class="msg tool"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6z"/></svg>Calling tool: search_places</div>
-              <div class="msg tool"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 13.5A2.25 2.25 0 016 11.25h2.25A2.25 2.25 0 0110.5 13.5v2.25A2.25 2.25 0 018.25 18H6a2.25 2.25 0 01-2.25-2.25V13.5z"/></svg>Calling tool: create_event</div>
-              <div class="msg bot">Found <strong>Blue Bottle Coffee</strong> (4.7★, 0.3 mi) and added it to your calendar for 3:00 PM. Anything else?</div>
+              <div class="msg tool"><span class="tdot"></span><b>search_places</b>&nbsp;· coffee near me → Blue Bottle, 0.3mi</div>
+              <div class="msg tool"><span class="tdot"></span><b>create_event</b>&nbsp;· Coffee @ Blue Bottle → Added 3:00 PM</div>
+              <div class="msg think"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>Thought process</div>
+              <div class="msg bot">Found Blue Bottle Coffee (4.7★, 0.3 mi) and added it to your calendar for 3:00 PM.</div>
+              <div class="msg stats"><span class="bar"></span>171.2 tok/s&nbsp;&nbsp;TTFT 0.31s&nbsp;&nbsp;58↓ 21↑&nbsp;&nbsp;qwen3-0.6b-q8_0</div>
+            </div>
+            <div class="phone-input">
+              <span class="placeholder">Message</span>
+              <span class="send"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -746,15 +803,13 @@
       <p>Swap models per-conversation. Every one runs entirely on-device.</p>
     </div>
     <div class="model-list">
+      <span class="model-tag"><span class="size">0.6B</span>Qwen3</span>
+      <span class="model-tag"><span class="size">1.2B</span>LFM2</span>
+      <span class="model-tag"><span class="size">1B</span>Gemma 3</span>
       <span class="model-tag"><span class="size">1B</span>Llama 3.2</span>
-      <span class="model-tag"><span class="size">3B</span>Llama 3.2</span>
-      <span class="model-tag"><span class="size">8B</span>Llama 3.1</span>
-      <span class="model-tag"><span class="size">3.8B</span>Phi-3</span>
-      <span class="model-tag"><span class="size">7B</span>Mistral</span>
-      <span class="model-tag"><span class="size">1.5B</span>DeepSeek</span>
-      <span class="model-tag"><span class="size">2B</span>Gemma</span>
-      <span class="model-tag"><span class="size">0.5B</span>Qwen</span>
-      <span class="model-tag more">+ 8 more</span>
+      <span class="model-tag"><span class="size">1.5B</span>DeepSeek R1 Distill</span>
+      <span class="model-tag"><span class="size">1.7B</span>SmolLM2</span>
+      <span class="model-tag more">+ 10 more</span>
     </div>
   </section>
 
