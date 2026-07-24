@@ -1,90 +1,183 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — LocalInference</title>
-<style>
-  :root { --bg:#0B0D12; --text:#E8ECF4; --muted:#8A94A8; --accent:#6C8CFF; --border:#232B3B; }
-  * { box-sizing: border-box; }
-  body { background:var(--bg); color:var(--text); margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.65; }
-  main { max-width:640px; margin:0 auto; padding:64px 24px; }
-  h1 { font-size:30px; letter-spacing:-0.02em; }
-  h2 { font-size:19px; margin-top:36px; border-bottom:1px solid var(--border); padding-bottom:6px; }
-  p, li { color:var(--muted); font-size:15.5px; }
-  strong { color:var(--text); }
-  a { color:var(--accent); }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — LocalInference</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: #FFFFFF;
+      color: #1F2937;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: #000; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      padding: 20px 24px;
+      border-bottom: 1px solid #F3F4F6;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+    }
+
+    .updated {
+      font-size: 14px;
+      color: #9CA3AF;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #6B7280;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: #6B7280;
+      line-height: 1.8;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    strong {
+      color: #1F2937;
+      font-weight: 600;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: #6B7280;
+      transition: color 200ms;
+    }
+
+    .back-link:hover {
+      color: #1F2937;
+    }
+
+    footer {
+      padding: 40px 24px;
+      border-top: 1px solid #F3F4F6;
+      text-align: center;
+      color: #9CA3AF;
+      font-size: 13px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #6B7280;
+    }
+
+    footer a:hover {
+      color: #1F2937;
+    }
+  </style>
 </head>
 <body>
-<main>
-<p><a href="/">← localinference.app</a></p>
-<h1>Privacy Policy — LocalInference</h1>
+  <header>
+    <div class="nav">
+      <div class="logo">LocalInference</div>
+    </div>
+  </header>
 
-<p><em>Last updated: 2026-07-20</em></p>
+  <main>
+    <a href="/" class="back-link">← Back to LocalInference</a>
 
-<h2>The short version</h2>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: July 23, 2026</p>
 
-<p>LocalInference collects <strong>no data</strong>. None. Your conversations, images, and settings</p>
-<p>stay on your device. We have no servers, no accounts, no analytics, and no</p>
-<p>crash reporting. We cannot see anything you do in the app.</p>
+    <h2>The Short Version</h2>
+    <p><strong>LocalInference collects zero data.</strong> Your conversations, images, and settings stay on your device. We have no servers, no accounts, no analytics, and no crash reporting. We cannot see anything you do in the app.</p>
 
-<h2>What stays on your device</h2>
+    <h2>What Stays on Your Device</h2>
+    <ul>
+      <li><strong>Chats and images</strong> are stored in a local database on your phone and never transmitted anywhere by us.</li>
+      <li><strong>Settings</strong> (active model, system prompt, preferences) are stored locally.</li>
+      <li><strong>API keys</strong> you optionally add are stored in your device's secure keychain/keystore and are sent only to the provider they belong to (Anthropic, OpenAI, Google, or a server you configure) when you choose to use that provider.</li>
+      <li><strong>Model files</strong> are downloaded and cached on your device for offline use.</li>
+    </ul>
 
-<ul>
-<li><strong>Chats and images</strong> are stored in a local database on your phone and never</li>
-<p>  transmitted anywhere by us.</p>
-<li><strong>Settings</strong> (active model, system prompt, preferences) are stored locally.</li>
-<li><strong>API keys</strong> you optionally add are stored in your device&#x27;s secure</li>
-<p>  keychain/keystore and are sent only to the provider they belong to</p>
-<p>  (Anthropic, OpenAI, Google, or a server you configure) when you choose to</p>
-<p>  use that provider.</p>
-</ul>
+    <h2>Network Connections</h2>
+    <p>LocalInference only uses the network for:</p>
+    <ol>
+      <li><strong>Model downloads</strong> — one-time downloads of AI model files from huggingface.co over HTTPS, at your explicit request.</li>
+      <li><strong>Optional tools you invoke</strong> — if tools are enabled and you ask for a web search or to load a webpage, the app contacts DuckDuckGo or the page you requested directly from your device.</li>
+      <li><strong>Optional cloud models</strong> — if you add your own API key, your prompts for those conversations are sent directly from your device to that provider under <strong>their</strong> privacy policy. This never happens unless you set it up.</li>
+    </ol>
+    <p>There is no proxy, no middleman, and no telemetry in any of these paths.</p>
 
-<h2>Network connections the app makes</h2>
+    <h2>Device Permissions</h2>
+    <ul>
+      <li><strong>Photos</strong> (optional): to attach an image you pick to a message. Access is select-photos-only; images are processed on-device.</li>
+      <li><strong>Contacts & Calendar</strong> (optional): only when you ask the assistant to look up a contact or manage events. Any change (like creating an event) shows a confirmation dialog first. Data is read on-device and shown to the on-device model; it is not transmitted unless you are deliberately using a cloud model in that conversation.</li>
+      <li><strong>Microphone</strong> (optional): only when you choose to use voice input. Audio is transcribed on-device using Whisper; no audio is sent to us.</li>
+      <li><strong>Speaker</strong> (optional): only when you enable read-aloud. Audio is generated on-device.</li>
+    </ul>
 
-<p>LocalInference only uses the network for:</p>
+    <h2>Data You Control</h2>
+    <p>You can delete any conversation at any time. Deleted conversations are permanently removed from your device with no copies retained anywhere. Export your conversations anytime—they're yours, not ours.</p>
 
-<ol>
-<li>1. <strong>Model downloads</strong> — one-time downloads of AI model files from</li>
-<p>   huggingface.co over HTTPS, at your explicit request.</p>
-<li>2. <strong>Optional tools you invoke</strong> — if tools are enabled and you ask for a web</li>
-<p>   search or a webpage, the app contacts DuckDuckGo or the page you requested</p>
-<p>   directly from your device.</p>
-<li>3. <strong>Optional cloud models</strong> — if you add your own API key, your prompts for</li>
-<p>   those conversations are sent directly from your device to that provider</p>
-<p>   under <strong>their</strong> privacy policy. This never happens unless you set it up.</p>
-</ol>
+    <h2>Children</h2>
+    <p>LocalInference is not directed at children under 13. AI-generated content may be inaccurate; always verify important information.</p>
 
-<p>There is no proxy, no middleman, and no telemetry in any of these paths.</p>
+    <h2>Policy Changes</h2>
+    <p>If this policy changes, the updated version ships with the app update and is posted at https://localinference.app/privacy/.</p>
 
-<h2>Device permissions</h2>
+    <h2>Questions?</h2>
+    <p>Contact us at <strong>support@localinference.app</strong></p>
+  </main>
 
-<ul>
-<li><strong>Photos</strong> (optional): to attach an image you pick to a message. Access is</li>
-<p>  select-photos-only; images are processed on-device.</p>
-<li><strong>Contacts / Calendar</strong> (optional): only when you ask the assistant to look</li>
-<p>  up a contact or manage events. Any change (like creating an event) shows a</p>
-<p>  confirmation dialog first. Data is read on-device and shown to the on-device</p>
-<p>  model; it is not transmitted (unless you are deliberately using a cloud</p>
-<p>  model in that conversation).</p>
-</ul>
-
-<h2>Children</h2>
-
-<p>LocalInference is not directed at children under 13. AI-generated content may be</p>
-<p>inaccurate; verify important information.</p>
-
-<h2>Changes</h2>
-
-<p>If this policy changes, the updated version ships with the app update and is</p>
-<p>posted at https://localinference.app/privacy.</p>
-
-<h2>Contact</h2>
-
-<p>support@localinference.app</p>
-
-</main>
+  <footer>
+    <p>© 2026 LocalInference. Built on Llama.</p>
+  </footer>
 </body>
 </html>
