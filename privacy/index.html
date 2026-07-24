@@ -4,128 +4,167 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — LocalInference</title>
+  <meta name="theme-color" content="#4F46E5">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234F46E5'/%3E%3Ccircle cx='16' cy='16' r='6' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    :root {
+      --ink: #0B0D12;
+      --body: #4B5563;
+      --muted: #9CA3AF;
+      --line: #E5E7EB;
+      --line-soft: #F0F1F3;
+      --accent: #4F46E5;
+      --accent-dark: #4338CA;
+      --accent-soft: #EEF2FF;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #FFFFFF;
-      color: #1F2937;
+      color: var(--ink);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: #000; text-decoration: none; }
+    a { color: var(--accent-dark); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     header {
-      padding: 20px 24px;
-      border-bottom: 1px solid #F3F4F6;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--line-soft);
     }
 
     .nav {
-      max-width: 1200px;
+      max-width: 1160px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .logo {
-      font-size: 18px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-weight: 700;
-      letter-spacing: -0.5px;
+      font-size: 16px;
+      letter-spacing: -0.2px;
+    }
+
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(155deg, var(--accent), #7C3AED);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .brand-mark::after {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border-radius: 50%;
+      background: #fff;
     }
 
     main {
-      max-width: 800px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 60px 24px;
+      padding: 64px 24px;
     }
 
     h1 {
       font-size: 36px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 10px;
       letter-spacing: -1px;
     }
 
     .updated {
-      font-size: 14px;
-      color: #9CA3AF;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-dark);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 999px;
       margin-bottom: 40px;
     }
 
     h2 {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 700;
-      margin-top: 40px;
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
+      margin-top: 44px;
+      margin-bottom: 14px;
+      letter-spacing: -0.4px;
     }
 
     p {
       font-size: 15px;
-      color: #6B7280;
+      color: var(--body);
       margin-bottom: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     ul, ol {
       margin-left: 20px;
       margin-bottom: 16px;
       font-size: 15px;
-      color: #6B7280;
+      color: var(--body);
       line-height: 1.8;
     }
 
-    li {
-      margin-bottom: 12px;
+    li { margin-bottom: 12px; }
+    li::marker { color: var(--accent); }
+
+    strong { color: var(--ink); font-weight: 600; }
+
+    .callout {
+      background: var(--accent-soft);
+      border: 1px solid #E4E1FB;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
     }
 
-    strong {
-      color: #1F2937;
-      font-weight: 600;
-    }
-
-    em {
-      font-style: italic;
-    }
+    .callout p { color: var(--ink); margin-bottom: 0; font-size: 14.5px; }
+    .callout strong { color: var(--accent-dark); }
 
     .back-link {
-      display: inline-block;
-      margin-bottom: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 32px;
       font-size: 14px;
-      color: #6B7280;
-      transition: color 200ms;
+      font-weight: 500;
+      color: var(--body);
+      transition: color 150ms;
     }
 
-    .back-link:hover {
-      color: #1F2937;
-    }
+    .back-link:hover { color: var(--ink); text-decoration: none; }
 
     footer {
       padding: 40px 24px;
-      border-top: 1px solid #F3F4F6;
+      border-top: 1px solid var(--line-soft);
       text-align: center;
-      color: #9CA3AF;
+      color: var(--muted);
       font-size: 13px;
-      margin-top: 60px;
     }
 
-    footer a {
-      color: #6B7280;
-    }
-
-    footer a:hover {
-      color: #1F2937;
-    }
+    footer a { color: var(--body); }
+    footer a:hover { color: var(--ink); }
   </style>
 </head>
 <body>
   <header>
     <div class="nav">
-      <div class="logo">LocalInference</div>
+      <a href="/" class="brand"><span class="brand-mark"></span>LocalInference</a>
     </div>
   </header>
 
@@ -133,10 +172,11 @@
     <a href="/" class="back-link">← Back to LocalInference</a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 23, 2026</p>
+    <span class="updated">Last updated July 23, 2026</span>
 
-    <h2>The Short Version</h2>
-    <p><strong>LocalInference collects zero data.</strong> Your conversations, images, and settings stay on your device. We have no servers, no accounts, no analytics, and no crash reporting. We cannot see anything you do in the app.</p>
+    <div class="callout">
+      <p><strong>The short version:</strong> LocalInference collects zero data. Your conversations, images, and settings stay on your device. We have no servers, no accounts, no analytics, and no crash reporting. We cannot see anything you do in the app.</p>
+    </div>
 
     <h2>What Stays on Your Device</h2>
     <ul>
@@ -158,13 +198,13 @@
     <h2>Device Permissions</h2>
     <ul>
       <li><strong>Photos</strong> (optional): to attach an image you pick to a message. Access is select-photos-only; images are processed on-device.</li>
-      <li><strong>Contacts & Calendar</strong> (optional): only when you ask the assistant to look up a contact or manage events. Any change (like creating an event) shows a confirmation dialog first. Data is read on-device and shown to the on-device model; it is not transmitted unless you are deliberately using a cloud model in that conversation.</li>
+      <li><strong>Contacts &amp; Calendar</strong> (optional): only when you ask the assistant to look up a contact or manage events. Any change (like creating an event) shows a confirmation dialog first. Data is read on-device and shown to the on-device model; it is not transmitted unless you are deliberately using a cloud model in that conversation.</li>
       <li><strong>Microphone</strong> (optional): only when you choose to use voice input. Audio is transcribed on-device using Whisper; no audio is sent to us.</li>
       <li><strong>Speaker</strong> (optional): only when you enable read-aloud. Audio is generated on-device.</li>
     </ul>
 
     <h2>Data You Control</h2>
-    <p>You can delete any conversation at any time. Deleted conversations are permanently removed from your device with no copies retained anywhere. Export your conversations anytime—they're yours, not ours.</p>
+    <p>You can delete any conversation at any time. Deleted conversations are permanently removed from your device with no copies retained anywhere. Export your conversations anytime — they're yours, not ours.</p>
 
     <h2>Children</h2>
     <p>LocalInference is not directed at children under 13. AI-generated content may be inaccurate; always verify important information.</p>
@@ -177,7 +217,7 @@
   </main>
 
   <footer>
-    <p>© 2026 LocalInference. Built on Llama.</p>
+    <p>© 2026 LocalInference · Built on Llama</p>
   </footer>
 </body>
 </html>
